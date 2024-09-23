@@ -1,0 +1,83 @@
+/* footer.css */
+
+html, body {
+  height: 100%; /* Ensure full height of viewport */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Minimum height of viewport */
+}
+
+.footer {
+  background-color: #333; /* Dark background color */
+  color: #f9f8fa; /* Text color */
+  padding: 20px; /* Padding around the footer content */
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+.footer-tabs {
+  display: flex;
+  justify-content: center; /* Center align tabs */
+  margin-bottom: 20px; /* Space below tabs */
+}
+
+.footer-tabs a {
+  color: #6820ef; /* Link text color */
+  text-decoration: none; /* Remove underline */
+  padding: 10px 20px; /* Padding inside tabs */
+  margin: 0 10px; /* Margin between tabs */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.footer-tabs a:hover {
+  background-color: #191717; /* Darker background on hover */
+}
+
+.footer-content {
+  margin-bottom: 20px; /* Space below content */
+}
+
+.footer-section {
+  text-align: right;
+  top: 30%; /* Center align content in the section */
+  margin-bottom: 20px; /* Space below each section */
+}
+
+.social-media-icons {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+}
+
+.social-media-icons li {
+  margin: 20 80px; /* Space between icons */
+}
+
+.icon {
+  cursor: pointer; /* Add pointer cursor for clickable icons */
+}
+
+.iconFacebook {
+  /* Specific styles for Facebook icon */
+  width: 50px; /* Adjust width for Facebook icon */
+  height: 50px; /* Adjust height for Facebook icon */
+}
+
+.iconLinkedIn {
+  /* Specific styles for LinkedIn icon */
+  width: 10px; /* Adjust width for LinkedIn icon */
+  height: 10px; /* Adjust height for LinkedIn icon */
+}
+
+.iconInstagram {
+  /* Specific styles for Instagram icon */
+  width: 10px; /* Adjust width for Instagram icon */
+  height: 10px; /* Adjust height for Instagram icon */
+}
+

@@ -1,0 +1,42 @@
+/* styles.css */
+
+.footer {
+    position: relative; /* Ensure the footer is relatively positioned */
+  }
+  
+  .socialMedia {
+    position: absolute;
+    top: 90%; /* Align at the top of the footer */
+    right: 90%; /* Align to the right within the footer */
+    text-align: right; /* Align content to the right */
+    padding: 10px; /* Add padding for spacing */
+  }
+  
+  .icons {
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-end; /* Align items to the right within flex container */
+  }
+  
+  /* Specific styles for each icon */
+  .icon {
+    cursor: pointer; /* Add pointer cursor for clickable icons */
+  }
+  
+  .iconFacebook {
+    /* Specific styles for Facebook icon */
+    width: 50px; /* Adjust width for Facebook icon */
+    height: 50px; /* Adjust height for Facebook icon */
+  }
+  
+  .iconLinkedIn {
+    /* Specific styles for LinkedIn icon */
+    width: 10px; /* Adjust width for LinkedIn icon */
+    height: 10px; /* Adjust height for LinkedIn icon */
+  }
+  
+  .iconInstagram {
+    /* Specific styles for Instagram icon */
+    width: 50px; /* Adjust width for Instagram icon */
+    height: 50px; /* Adjust height for Instagram icon */
+  }
+  

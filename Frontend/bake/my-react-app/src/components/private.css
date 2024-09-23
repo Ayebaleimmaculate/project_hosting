@@ -1,0 +1,51 @@
+.privacyPage {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: rgb(246, 244, 244); /* Set text color to black */
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.3em; /* Adjust font size for h3 as desired */
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+ul {
+  margin-bottom: 15px;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+/* Optional: Styling for contact details */
+ul li::before {
+  content: "\2022"; /* Bullet character */
+  color: #007bff; /* Change bullet color if desired */
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* Remove underline from links */
+ul li a {
+  text-decoration: none;
+  color: #007bff; /* Link color */
+}
+
+ul li a:hover {
+  text-decoration: none; /* Ensure no underline on hover */
+}

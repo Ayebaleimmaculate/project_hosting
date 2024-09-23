@@ -1,0 +1,25 @@
+.logo-container {
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    bottom:90%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 235px; /* Adjust size as needed */
+    height: 260px; /* Adjust size as needed */
+    border-radius: 50%; /* Make it perfectly circular */
+    overflow: hidden; /* Ensure the logo stays within the circle */
+    border: 2px solid rgb(14, 14, 14); /* Thick white border */
+  }
+  
+  .logo img {
+    width: 100%; /* Make the image take up the entire space of the parent container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
