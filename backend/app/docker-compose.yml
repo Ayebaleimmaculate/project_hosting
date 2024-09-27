@@ -1,11 +1,27 @@
 
-version: "3.8"
+version: "3"
 
 services:
+frontend:
+  build: ./frontend
+  ports:
+   -"80:80"
+  depends_on:
+   -backend
   backend:
     build: .
     ports:
       - "5000:5000"
     env_file:
       - .env
-#for the follow of the work
+  db:
+  image: mysql:5.7
+  environment:
+  MYSQL_ROOT_PASSWORD: root_password
+  MYSQL_DATABASE: bakeryapi
+  
+  volumes:
+   - db_data: /var/lib/mysql
+volumes:
+  db_data:
+   
