@@ -1,45 +1,32 @@
 import React, { useState, useRef } from 'react';
 import locationImage from '../images/locate.PNG';
 
+const WHATSAPP_NUMBER = '+256773491110'; // Your WhatsApp number
+const WHATSAPP_MESSAGE_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=`; // Base URL for WhatsApp
+
 const Contact = () => {
   const [message, setMessage] = useState('');
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const messageRef = useRef(null);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    const formData = {
-      name: nameRef.current.value,
-      email: emailRef.current.value,
-      message: messageRef.current.value
-    };
+    // Construct the WhatsApp message
+    const name = nameRef.current.value;
+    const email = emailRef.current.value;
+    const userMessage = messageRef.current.value;
+    const formattedMessage = `Contact Details:%0AName: ${name}%0AEmail: ${email}%0AMessage: ${userMessage}`;
+    const whatsappUrl = `${WHATSAPP_MESSAGE_URL}${encodeURIComponent(formattedMessage)}`;
 
-    try {
-      const response = await fetch('http://127.0.0.1:5000/api/v1/contacts/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      });
+    // Redirect to WhatsApp
+    window.open(whatsappUrl, '_blank');
 
-      if (!response.ok) {
-        const errorMessage = await response.json();
-        setMessage(errorMessage.error);
-      } else {
-        const successMessage = await response.json();
-        setMessage(successMessage.message);
-        // Clear form fields after successful submission (if needed)
-        nameRef.current.value = '';
-        emailRef.current.value = '';
-        messageRef.current.value = '';
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      setMessage('Error submitting form. Please try again later.');
-    }
+    // Optionally reset form fields after submission
+    nameRef.current.value = '';
+    emailRef.current.value = '';
+    messageRef.current.value = '';
   };
 
   return (
@@ -50,7 +37,7 @@ const Contact = () => {
 
         <div className="contact-info">
           <h2>Contact Details:</h2>
-          <p><strong>Phone:</strong> +265888769228</p>
+          <p><strong>Phone:</strong> +256773491110</p>
           <p><strong>Email:</strong> faithconfidentionalbakery@gmail.com</p>
           <p><strong>Address:</strong> 81-79 Kyanja Ring Rd, Kampala</p>
         </div>
@@ -76,7 +63,7 @@ const Contact = () => {
 
       <div className="location-image">
         <div className="trade-text">
-          <p>Come Trade With Us</p>
+          <p>We are located at</p>
         </div>
         <img src={locationImage} alt="Location Image" />
       </div>

@@ -1,0 +1,130 @@
+/* Products.css */
+
+.products-container {
+    width: 100%; /* Set container width to 100% */
+    max-width: 2600px; /* Limit maximum width */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(238, 234, 226);
+  }
+  
+  .section-title {
+    font-size: 4.5rem;
+    
+    text-align: center;
+    
+    margin-bottom: 30px;
+    color:rgb(248, 184, 47);
+  }
+  
+  .product-category {
+    margin-bottom: 40px;
+  }
+  
+  .category-title {
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+    color:#1f1e1e;
+  }
+  
+  .products-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .product-card {
+    flex: 1 1 250px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(20, 20, 20, 0.1);
+  }
+  
+  .product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .product-name {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  .product-description {
+    font-size: 1rem;
+    color: #f6cd6f;
+    margin-top: 10px;
+  }
+  
+  .product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #1f1e1e;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  
+  .more-products-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .sidebar {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .sidebar-content {
+    font-size: 1.1rem;
+  }
+  
+  .sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar ul li a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .sidebar ul li a:hover {
+    text-decoration: underline;
+  }
+  

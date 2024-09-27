@@ -41,9 +41,13 @@ const TermsOfService = () => {
       <h3>12. Contact Information</h3>
       <p>If you have any questions about these Terms of Service, please contact us:</p>
       <ul>
-        <li>Email: info@yourbakery.com</li>
-        <li>Phone: +1 (123) 456-7890</li>
-        <li>Address: 123 Bakery Street, City, State, Zip Code</li>
+
+      <li>Email: faithconfidentionalbakery@gmail.com
+
+</li>
+<li>Phone: +265888769228</li>
+<li>Address:81-79 Kyanja Ring Rd, Kampala </li>
+        
       </ul>
     </div>
   );

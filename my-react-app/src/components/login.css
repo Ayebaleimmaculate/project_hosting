@@ -1,0 +1,123 @@
+/* login */
+/* login.css */
+
+.login-container {
+    width: 100%;
+    max-width: 10000px;
+    min-height: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Ensures .left-content and .right-content are spaced apart */
+    align-items: flex-start; /* Align items at the top of the container */
+    padding: 50px;
+    background-color: #efe9de;
+    
+  }
+  
+  .left-content {
+    flex: 1; /* Takes up remaining space */
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+  
+  .left-content h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  .left-content form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .left-content label {
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .left-content input[type="text"],
+  .left-content input[type="email"],
+  .left-content textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: calc(100% - 20px); /* Ensure full width minus padding */
+  }
+  /* Specific styling for password input */
+  .left-content input[type="password"] {
+    padding: 15px; /* Increase padding for more space inside the input */
+    margin-bottom: 25px;
+    border: 1px solid #007bff; /* Different border color for distinction */
+    border-radius: 4px;
+    font-size: 16px;
+    width: calc(100% - 40px); /* Ensure full width minus padding, adjust as needed */
+    background-color: #e9f5ff; /* Different background color for distinction */
+    height: 80px; /* Increase height */
+  }
+  
+  
+  
+  /* Style for checkboxes */
+  .left-content input[type="checkbox"] {
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  
+  .left-content button.btn-submit {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .left-content button.btn-submit:hover {
+    background-color: #f0cca4;
+  }
+  
+  .left-content p {
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .left-content a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .left-content a:hover {
+    text-decoration: underline;
+  }
+  
+  .right-content {
+    flex: 1; /* Takes up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align content vertically within its container */
+    align-items: center; /* Center content horizontally */
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 300px; /* Adjust this value to move the content down */
+  }
+  
+  .right-content h2 {
+    font-size: 24px;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  .right-content p {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 15px;
+  }
+  

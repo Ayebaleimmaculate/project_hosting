@@ -1,0 +1,84 @@
+.careersPage {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .careersPage h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .careersPage p {
+    line-height: 1.6;
+  }
+  
+  .careersPage .positions {
+    margin-bottom: 30px;
+  }
+  
+  .careersPage .positions h2,
+  .careersPage .perks h2,
+  .careersPage .howToApply h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .careersPage .positions ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .careersPage .positions .jobListing {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .careersPage .positions .jobImage {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .careersPage .positions .jobDetails {
+    flex: 1;
+  }
+  
+  .careersPage .positions .jobDetails h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .careersPage .positions .jobDetails p {
+    margin-bottom: 10px;
+  }
+  
+  .careersPage .positions .jobDetails a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #f9a825;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .careersPage .positions .jobDetails a:hover {
+    background-color: #f57c00;
+  }
+  
+  .careersPage .perks ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .careersPage .howToApply p {
+    margin-top: 10px;
+  }
+  
+  .careersPage .howToApply a {
+    color: #f9a825;
+  }
+  

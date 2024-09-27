@@ -30,9 +30,11 @@ const PrivacyPolicy = () => {
       <h3>8. Contact Us</h3>
       <p>If you have any questions about our Privacy Policy, please contact us:</p>
       <ul>
-        <li>Email: info@faithsconfectionery.com</li>
-        <li>Phone: +1 (123) 456-7890</li>
-        <li>Address: 456 Confectionery Lane, City, State, Zip Code</li>
+        <li>Email: faithconfidentionalbakery@gmail.com
+
+        </li>
+        <li>Phone: +265888769228</li>
+        <li>Address:81-79 Kyanja Ring Rd, Kampala </li>
       </ul>
     </div>
   );

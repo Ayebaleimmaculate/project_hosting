@@ -6,12 +6,13 @@ import ShopInStore from './components/shopInStore'; // Corrected component impor
 import Products from './components/product';
 import Contact from './components/contacts';
 import Home from './components/home';
-import OrderOnline from './components/orders'; // Corrected component import path
+import OrderNow from './components/orders'; // Corrected component import path
 import AboutUs from './components/about';
 import Account from './components/login';
-import Dashboard from './components/dashboard'; // Import Dashboard component
 import Footer from './components/footer';
-import backgroundImg from './background.PNG';
+import Blogs from './components/blogs'; // Import Blog component
+import backgroundImg from './images/bakkkk.jpg';
+
 import './icons.css';
 // Import your icon images
 import contactIcon from './images/contactt.png';
@@ -20,19 +21,19 @@ import accountIcon from './images/account.jpg';
 function App() {
   return (
     <Router>
-      <div className="App" style={{ backgroundImage: `url(${backgroundImg})` }}>
+      <div className="App" style={{ backgroundImage: `url(${backgroundImg})`, backgroundSize: 'cover' }}>
         <header>
           <nav>
             <ul>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About</Link></li>
               <li><Link to="/products">Products</Link></li>
-              {/* Include Logo component here */}
               <li className="logo-link">
                 <Logo />
               </li>
-              <li className="icon-link"><Link to="/order-online">Order Online</Link></li>
-              <li className="icon-link"><Link to="/dashboard">Dashboard</Link></li>
+              <li className="icon-link"><Link to="/order-online">OrderNow</Link></li>
+              <li><Link to="/blogs">Blogs</Link></li>
+              {/* Removed Dashboard link */}
             </ul>
 
             <div className="top-right-icons">
@@ -46,17 +47,22 @@ function App() {
           </nav>
         </header>
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/contacts" element={<Contact />} />
-          <Route path="/account" element={<Account />} />
-          <Route path="/order-online" element={<OrderOnline />}>
-            <Route path="shop-in-store" element={<ShopInStore />} />
-          </Route>
-          <Route path="/dashboard" element={<Dashboard />} />
-        </Routes>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/contacts" element={<Contact />} />
+            <Route path="/account" element={<Account />} />
+            <Route path="/order-online" element={<OrderNow />}>
+
+              {/* Nested route for ShopInStore component */}
+              <Route path="shop-in-store" element={<ShopInStore />} />
+            </Route>
+            <Route path="/blogs" element={<Blogs />} />
+            {/* Removed Dashboard route */}
+          </Routes>
+        </main>
 
         <Footer />
       </div>
@@ -65,4 +71,3 @@ function App() {
 }
 
 export default App;
-// the

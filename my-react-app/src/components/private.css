@@ -4,7 +4,8 @@
   padding: 20px;
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: rgb(246, 244, 244); /* Set text color to black */
+  background-color: rgb(231, 234, 237);
+  color: rgb(18, 17, 17); /* Set text color to black */
 }
 
 h1 {

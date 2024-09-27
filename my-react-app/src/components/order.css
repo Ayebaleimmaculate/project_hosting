@@ -1,68 +1,75 @@
-/* Styles for OrderOnline component */
-
-/* Container styling */
+/* Container for the form */
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Heading styling */
-  h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  /* Form styling */
-  form {
-    display: grid;
-    grid-gap: 10px;
-  }
-  
-  /* Label styling */
-  label {
-    font-weight: bold;
-    color: #555;
-  }
-  
-  /* Input styling */
-  input[type="text"],
-  textarea {
-    width: calc(100% - 20px);
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  /* Textarea specific styling */
-  textarea {
-    resize: vertical;
-    min-height: 100px;
-  }
-  
-  /* Button styling */
-  button[type="submit"] {
-    background-color: #ff8c42;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #ff6b00;
-  }
-  
-  /* Optional: Add more styles based on your design preferences */
-  
+  display: flex;
+  max-width: 2000px;
+  align-items: center; /* Center the form vertically within the container */
+  justify-content: flex-start; /* Align the form to the left side */
+  height: 100vh; /* Full viewport height */
+  padding: 20px; /* Padding around the form */
+  background-size: cover;
+  top: 40px;
+  margin-top: -60px;
+  min-height: 1200px; /* Cover the entire container with the background image */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent repeating of the background image */
+}
+
+/* Form styling */
+form {
+  max-width: 600px; /* Increased width for the form */
+  width: 100%; /* Full width within the max-width constraint */
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  padding: 50px; /* Increased padding inside the form */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow effect */
+}
+.order{
+  color: #f8f6f5;
+ margin-top: -800px;
+ font-size: 2rem;
+ text-align: center;
+ margin-right: -20px;
+}
+/* General styling for form elements */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Increased padding */
+  margin-bottom: 15px; /* Increased space between fields */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 6px; /* Rounded corners */
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 100px; /* Set a minimum height */
+}
+
+/* Button styling */
+button {
+  background-color: #b92121; /* Primary button color */
+  color: white;
+  padding: 12px 20px; /* Increased padding */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px; /* Larger font size */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 20px;
+}

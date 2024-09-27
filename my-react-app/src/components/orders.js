@@ -1,158 +1,136 @@
 import React, { useState } from 'react';
-//import './order.css';
+import './order.css';
+import backgroundImage from '../images/orderrr.jpg'; // Adjust the path based on your project structure
 
-const OrderOnline = () => {
-    const [formData, setFormData] = useState({
-        customer_id: '',
-        product_id: '',
-        user_id: '',
-        status: '',
-        quantity: '',
-        total_price: '',
-        gender: '',
-        special_instructions: ''
+const WHATSAPP_NUMBER = '+256773491110'; // Your WhatsApp number
+const WHATSAPP_MESSAGE_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=`;
+
+// Define price options
+const priceOptions = [
+  { label: '1/2 Kg - 70,000', value: '0.5:70000' },
+  { label: '1 Kg - 50,000', value: '1:50000' },
+  { label: '2 Kg - 80,000', value: '2:80000' },
+  { label: '3 Kg - 100,000', value: '3:100000' },
+  { label: '4 Kg - 140,000', value: '4:140000' },
+  { label: '5 Kg - 200,000', value: '5:200000' },
+];
+
+const OrderNow = () => {
+  const [formData, setFormData] = useState({
+    product_id: '',
+    quantity: '1', // Default quantity
+    price: 50000, // Default price for 1 Kg
+    special_instructions: ''
+  });
+
+  const [error, setError] = useState('');
+
+  // Update form data and price based on selected option
+  const handlePriceChange = (e) => {
+    const [quantity, price] = e.target.value.split(':');
+
+    setFormData({
+      ...formData,
+      quantity,
+      price: parseInt(price, 10)
     });
+  };
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
+  // Update quantity in form data
+  const handleQuantityChange = (e) => {
+    const quantity = e.target.value;
+    const priceOption = priceOptions.find(option => option.value.startsWith(quantity));
+    const price = priceOption ? parseInt(priceOption.value.split(':')[1], 10) : formData.price;
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    setFormData({
+      ...formData,
+      quantity,
+      price
+    });
+  };
 
-        try {
-            const response = await fetch('http://127.0.0.1:5000/api/v1/orders/create', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-            const responseData = await response.json();
+    const { product_id, quantity, price, special_instructions } = formData;
 
-            if (!response.ok) {
-                throw new Error(responseData.error || 'Order creation failed');
-            }
+    // Construct the WhatsApp message
+    const message = `Order Details:%0AProduct: ${product_id}%0AQuantity: ${quantity} Kg%0APrice: ${price} UGX%0ASpecial Instructions: ${special_instructions}`;
+    const whatsappUrl = `${WHATSAPP_MESSAGE_URL}${encodeURIComponent(message)}`;
 
-            console.log(responseData.message);
-            // Optionally handle success, e.g., show a success message, redirect, etc.
+    // Redirect to WhatsApp
+    window.open(whatsappUrl, '_blank');
+    
+    // Optionally reset form fields after submission
+    setFormData({
+      product_id: '',
+      quantity: '1',
+      price: 50000,
+      special_instructions: ''
+    });
+  };
 
-            // Reset form fields after successful submission
-            setFormData({
-                customer_id: '',
-                product_id: '',
-                user_id: '',
-                status: '',
-                quantity: '',
-                total_price: '',
-                gender : '',
-                special_instructions: ''
-            });
-
-        } catch (error) {
-            console.error('Error creating order:', error.message);
-            // Optionally handle error, e.g., show an error message to the user
-        }
-    };
-
-    return (
+  return (
+    <div className="container" style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <h2 className='order'>Order Now</h2>
+      {error && <p className="error">{error}</p>}
+      <form onSubmit={handleSubmit}>
         <div>
-            <h2>Order Online</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="customer_id">Customer ID:</label>
-                    <input
-                        type="text"
-                        id="customer_id"
-                        name="customer_id"
-                        value={formData.customer_id}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="product_id">Product ID:</label>
-                    <input
-                        type="text"
-                        id="product_id"
-                        name="product_id"
-                        value={formData.product_id}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="user_id">User ID:</label>
-                    <input
-                        type="text"
-                        id="user_id"
-                        name="user_id"
-                        value={formData.user_id}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="status">Status:</label>
-                    <input
-                        type="text"
-                        id="status"
-                        name="status"
-                        value={formData.status}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="quantity">Quantity:</label>
-                    <input
-                        type="text"
-                        id="quantity"
-                        name="quantity"
-                        value={formData.quantity}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="total_price">Total Price:</label>
-                    <input
-                        type="text"
-                        id="total_price"
-                        name="total_price"
-                        value={formData.total_price}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-
-
-                <div>
-                    <label htmlFor="gender">Gender:</label>
-                    <input
-                        type="text"
-                        id="gender"
-                        name="gender"
-                        value={formData.gender}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="special_instructions">Special Instructions:</label>
-                    <textarea
-                        id="special_instructions"
-                        name="special_instructions"
-                        value={formData.special_instructions}
-                        onChange={handleChange}
-                    />
-                </div>
-                <button type="submit">Submit</button>
-            </form>
+          <label>Select Product:</label>
+          <select
+            name="product_id"
+            value={formData.product_id}
+            onChange={(e) => setFormData({ ...formData, product_id: e.target.value })}
+            required
+          >
+            <option value="" disabled>Select a product</option>
+            <option value="wedding_cake">Wedding Cake</option>
+            <option value="birthday_cake">Birthday Cake</option>
+            <option value="baby_shower_cake">Baby Shower Cake</option>
+            <option value="graduation_cake">Graduation Cake</option>
+            <option value="anniversary_cake">Anniversary Cake</option>
+            {/* Removed muffin and doughnut options */}
+          </select>
         </div>
-    );
+        <div>
+          <label>Price:</label>
+          <select
+            name="price"
+            value={`${formData.quantity}:${formData.price}`}
+            onChange={handlePriceChange}
+            required
+          >
+            <option value="" disabled>Price</option>
+            {priceOptions.map(option => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label>Quantity:</label>
+          <input
+            name="quantity"
+            type="number"
+            min="1"
+            value={formData.quantity}
+            onChange={handleQuantityChange}
+            required
+          />
+        </div>
+        <div>
+          <label>Special Instructions:</label>
+          <textarea
+            name="special_instructions"
+            value={formData.special_instructions}
+            onChange={(e) => setFormData({ ...formData, special_instructions: e.target.value })}
+          />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  );
 };
 
-export default OrderOnline;
+export default OrderNow;

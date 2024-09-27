@@ -4,8 +4,9 @@
 .subscriptionPage {
   max-width: 800px;
   margin: 0 auto;
+  color: rgb(10, 10, 10);
   padding: 20px;
-  background-color: #151515;
+  background-color: #f5f3f3;
   border: 1px solid #ddd;
   border-radius: 5px;
 }

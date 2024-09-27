@@ -1,0 +1,48 @@
+/* home.css */
+
+.container {
+  padding: 8px; /* Reduced padding to move content up */
+  border-radius: 8px; /* Optional: add rounded corners */
+  max-width: 800px; /* Limit the width for better layout */
+  margin: 10px auto; /* Center the container horizontally and reduce top margin */
+  position: relative; /* To adjust positioning relative to its normal position */
+  top: -90px;
+  height: 100vh;
+  margin-top: -400px; /* Adjust the top position to raise the content */
+}
+
+.text-content {
+  color: rgb(158, 86, 8);
+  font-family: 'Georgia', serif;
+  /*color: rgb(200, 123, 8); /* Text color */
+  text-align: center; /* Center-align text */
+}
+
+.text-content h1 {
+  font-size: 6.5rem;
+  letter-spacing: -6.5px; /* Increase font size of the heading */
+  margin-bottom: 10px; /* Space below the heading */
+  
+}
+
+.text-content p.slogan {
+  color: rgb(230, 181, 82);
+  margin-top: -30px;
+  font-family: 'Pacifico', cursive;
+  font-size: 4rem; /* Increase font size of the slogan */
+  margin-bottom: 30px; /* Space below the slogan */
+}
+
+.btn {
+  padding: 15px 30px; /* Increase button padding */
+  font-size: 1.6rem; /* Increase button font size */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Rounded corners for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  background-color: rgb(115, 57, 3); /* Button background color matching the text */
+  color: #fff; /* Button text color */
+}
+
+.btn:hover {
+  background-color: rgb(200, 120, 0); /* Slightly darker color on hover */
+}

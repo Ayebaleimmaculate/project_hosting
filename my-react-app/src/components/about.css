@@ -1,0 +1,63 @@
+/* about.css */
+
+.about-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    padding: 20px; /* Add padding around the content */
+    background-color: #f9f9f9; /* Light background color */
+    min-height: 1300px; /* Ensure it covers the full viewport height */
+    box-sizing: border-box; 
+    max-width: 8500px;/* Include padding and border in element's total width and height */
+    width: 100%; /* Full width of the viewport */
+  }
+  
+  .content {
+    flex: 2; /* Take up 2/3 of the container */
+    margin-right: 20px; /* Space between content and image */
+    color: #333; /* Dark text color for better readability */
+    max-width: 100%; /* Ensure content takes full width */
+  }
+  
+  .content h1 {
+    font-size: 3rem; /* Larger font size for the main heading */
+    color: rgb(238, 147, 10); /* Color matching the theme */
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  .content h2 {
+    font-size: 2rem; /* Font size for subheadings */
+    color: rgb(200, 120, 0); /* Slightly darker color for subheadings */
+    margin-top: 20px; /* Space above the subheading */
+    margin-bottom: 10px; /* Space below the subheading */
+  }
+  
+  .content p {
+    font-size: 1.2rem; /* Font size for paragraphs */
+    line-height: 1.6; /* Line height for better readability */
+    margin-bottom: 20px; /* Space below paragraphs */
+  }
+  
+  .content ul {
+    list-style-type: disc; /* Disc style for list items */
+    padding-left: 20px; /* Padding for list items */
+    margin-bottom: 20px; /* Space below lists */
+  }
+  
+  .content li {
+    font-size: 1.2rem; /* Font size for list items */
+    margin-bottom: 10px; /* Space below list items */
+  }
+  
+  .image {
+    flex: 1; /* Take up 1/3 of the container */
+    text-align: center; /* Center the image */
+    max-width: 100%; /* Ensure image container takes full width */
+  }
+  
+  .image img {
+    max-width: 800px;
+    min-height: 500px; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for the image */
+  }
+  

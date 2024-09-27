@@ -1,40 +1,67 @@
-.termsPage {
+.teamspage {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  background-color: aliceblue;
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: rgb(246, 244, 244);
-  
-  
+  color: rgb(18, 17, 17); /* Set text color to black */
+  text-align: center; /* Center-align text */
 }
 
-/*h1 {
-  font-size: 2em;
-  text-align: center;
-  margin-bottom: 20px;
+.team {
+  text-align: left; /* Reset text alignment for individual teams */
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: inline-block; /* Ensure teams appear in a line */
+  vertical-align: top; /* Align teams at the top */
+  width: 100%; /* Ensure each team takes full width of the container */
+  max-width: 300px; /* Limit the width of each team */
+  box-sizing: border-box; /* Include padding and border in the width */
 }
 
-h3 {
-  font-size: 1.5em;
-  margin-top: 30px;
-}
-
-p {
-  line-height: 1.6;
-}
-
-/*ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
+.team h2 {
+  font-size: 1.8em;
   margin-bottom: 10px;
 }
 
-/*@media (max-width: 600px) {
-  .termsPage {
-    padding: 10px;
-  }
-}*/
+.team p {
+  margin-bottom: 15px;
+}
+
+.team ul {
+  margin-bottom: 15px;
+}
+
+.team ul li {
+  list-style-type: disc; /* Use bullets for list items */
+  margin-left: 20px; /* Indent list items */
+}
+
+.team ul li:last-child {
+  margin-bottom: 0; /* Remove bottom margin from last list item */
+}
+
+.team img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.team .social-links {
+  margin-top: 10px;
+}
+
+.team .social-links a {
+  display: inline-block;
+  text-decoration: none;
+  color: #007bff; /* Link color */
+  margin-right: 10px;
+}
+
+.team .social-links a:hover {
+  text-decoration: underline; /* Underline on hover */
+}

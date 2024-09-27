@@ -16,14 +16,15 @@
   }
   
   .contact-button {
-    background-color: #f19509; /* Example background color for contact button */
+    background-color: #f6ddb3;
+    /* Example background color for contact button */
     border-radius: 5px;
     padding: 10px;
     margin-right: 10px; /* Adjust the margin between buttons */
   }
   
   .account-button {
-    background-color: #007bff; /* Example background color for account button */
+    background-color: #f6ddb3; /* Example background color for account button */
     border-radius: 5px;
     padding: 10px;
   }
