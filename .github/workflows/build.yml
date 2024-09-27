@@ -25,8 +25,8 @@ jobs:
       - name: Build and push backend Docker image
         uses: docker/build-push-action@v5
         with:
-          context: C:/Users/Administrator/Desktop/code/backend/app
-          file: C:/Users/Administrator/Desktop/code/backend/appDockerfile
+          context: ./backend/app
+          file: ./backend/app/Dockerfile
           push: true
           tags: immacula99te/recesswork1:backend-latest
 
@@ -52,8 +52,8 @@ jobs:
       - name: Build and push frontend Docker image
         uses: docker/build-push-action@v5
         with:
-          context: C:/Users/Administrator/Desktop/code/Frontend/bake/my-react-app
-          file: C:/Users/Administrator/Desktop/code/Frontend/bake/my-react-appDockerfile #i canhed something here
+          context: ./Frontend/bake/my-react-app
+          file: ./Frontend/bake/my-react-app/Dockerfile 
           push: true
           tags: immacula99te/recesswork1:frontend-latest
 
