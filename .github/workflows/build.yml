@@ -52,11 +52,11 @@ jobs:
       - name: Build and push frontend Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./Frontend/bake/my-react-app
-          file: ./Frontend/bake/my-react-app/Dockerfile 
+          context: ./my-react-app
+          file: ./my-react-app/Dockerfile 
           push: true
           tags: immacula99te/recesswork1:frontend-latest
 
       - name: Log out of Docker Hub
         run: docker logout
-        ##
+        
